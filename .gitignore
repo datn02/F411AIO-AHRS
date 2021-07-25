@@ -1,0 +1,11 @@
+*.o
+*~
+*.uvopt
+*.dep
+*.bak
+*.uvgui.*
+.project
+.settings
+.cproject
+obj/
+patches/
