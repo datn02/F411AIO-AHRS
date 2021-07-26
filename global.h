@@ -11,8 +11,8 @@
 //bool angle;					 // auto level status
 //uint8_t start; 			 // ARM status
 //#define USE_COMP_FILTER
-#define REFRESH_RATE 		250  // in Hz
-#define LOOPTIME 				4000 // in microseconds
+#define REFRESH_RATE 		500  // in Hz
+#define LOOPTIME 				2000 // in microseconds
 
 
 

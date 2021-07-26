@@ -27,14 +27,11 @@ Project File Date:  06/20/2021
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'E:\Keil uVision\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-pid.c(114): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-                LED_ON;                                                 // turn on led
-                ^~~~~~
-./LED_Config.h(5): note: expanded from macro 'LED_ON'
-#define LED_ON                  GPIOC->ODR &= ~((1 << 13) | (1 << 14))
-                                           ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
+ibus.c(32): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+      rxsum = (uint16_t) ibus[30] + (ibus[31]<<8);
+            ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
 1 warning generated.
-compiling pid.c...
+compiling ibus.c...
 mpu6000.c(19): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
         ENABLE_MPU6000;
         ^~~~~~~~~~~~~~
@@ -103,23 +100,6 @@ mpu6000.c(127): warning: implicit conversion changes signedness: 'int' to 'unsig
                                   ~~ ^~~~~~~~~
 11 warnings generated.
 compiling mpu6000.c...
-LED_Config.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOC->OTYPER &= ~((1 << 13) | (1 << 14));
-                      ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
-LED_Config.c(21): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOC->PUPDR &= ~((1 << 29) | (1 << 28) | (1 << 27) | (1 << 26));
-                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-2 warnings generated.
-compiling LED_Config.c...
-MahonyAHRS.c(105): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
-                _2bx = sqrt(hx * hx + hy * hy);
-                     ~ ^~~~~~~~~~~~~~~~~~~~~~~
-MahonyAHRS.c(105): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
-                _2bx = sqrt(hx * hx + hy * hy);
-                       ~~~~ ~~~~~~~~^~~~~~~~~
-2 warnings generated.
-compiling MahonyAHRS.c...
-compiling main.c...
 mixer.c(27): warning: implicit conversion turns floating-point number into integer: 'float' to 'uint16_t' (aka 'unsigned short') [-Wfloat-conversion]
                 esc_1 = (uint16_t) throttle - pid_output_pitch + pid_output_roll - pid_output_yaw;        //Calculate the pulse for esc 1 (front-right - CCW).
                       ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
@@ -134,12 +114,49 @@ mixer.c(30): warning: implicit conversion turns floating-point number into integ
           ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
 4 warnings generated.
 compiling mixer.c...
-ibus.c(32): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-      rxsum = (uint16_t) ibus[30] + (ibus[31]<<8);
-            ~ ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+compiling main.c...
+LED_Config.c(15): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOC->OTYPER &= ~((1 << 13) | (1 << 14));
+                      ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
+LED_Config.c(21): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOC->PUPDR &= ~((1 << 29) | (1 << 28) | (1 << 27) | (1 << 26));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+compiling LED_Config.c...
+pid.c(114): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                LED_ON;                                                 // turn on led
+                ^~~~~~
+./LED_Config.h(5): note: expanded from macro 'LED_ON'
+#define LED_ON                  GPIOC->ODR &= ~((1 << 13) | (1 << 14))
+                                           ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
 1 warning generated.
-compiling ibus.c...
+compiling pid.c...
+MahonyAHRS.c(105): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                _2bx = sqrt(hx * hx + hy * hy);
+                     ~ ^~~~~~~~~~~~~~~~~~~~~~~
+MahonyAHRS.c(105): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                _2bx = sqrt(hx * hx + hy * hy);
+                       ~~~~ ~~~~~~~~^~~~~~~~~
+2 warnings generated.
+compiling MahonyAHRS.c...
 compiling RCC_Config.c...
+SPI.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->MODER &= ~((1 << 9) | (1 << 10) | (1 << 12) | (1 << 14));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+SPI.c(18): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->PUPDR &= ~((1 << 8) | (1 << 9));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~~~
+SPI.c(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SPI1->CR1 &= ~(1 << 7);
+                  ~~ ^~~~~~~~~
+SPI.c(51): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        SPI1->CR1 &= ~((1 << 10) | (1 << 11));
+                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
+SPI.c(110): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+        tempRegister = SPIx->CR1;
+                     ~ ~~~~~~^~~
+5 warnings generated.
+compiling SPI.c...
 task.c(48): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
                 LED_ON;
                 ^~~~~~
@@ -172,24 +189,26 @@ task.c(88): warning: implicit conversion changes signedness: 'int' to 'unsigned 
                                            ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
 5 warnings generated.
 compiling task.c...
-SPI.c(12): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOA->MODER &= ~((1 << 9) | (1 << 10) | (1 << 12) | (1 << 14));
-                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SPI.c(18): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOA->PUPDR &= ~((1 << 8) | (1 << 9));
+usart.c(22): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->MODER &= ~((1 << 18) | (1 << 20));
+                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
+usart.c(35): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        USART1->CR1 &= ~(1 << 12);
+                    ~~ ^~~~~~~~~~
+usart.c(61): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOA->MODER &= ~((1 << 4) | (1 << 6));
                      ~~ ^~~~~~~~~~~~~~~~~~~~~~
-SPI.c(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        SPI1->CR1 &= ~(1 << 7);
-                  ~~ ^~~~~~~~~
-SPI.c(51): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        SPI1->CR1 &= ~((1 << 10) | (1 << 11));
-                  ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
-SPI.c(110): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
-        tempRegister = SPIx->CR1;
-                     ~ ~~~~~~^~~
-5 warnings generated.
-compiling SPI.c...
-compiling system_stm32f4xx.c...
+usart.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        USART2->CR1 &= ~(1 << 12);
+                    ~~ ^~~~~~~~~~
+usart.c(86): warning: unused variable 'buff' [-Wunused-variable]
+        char buff[80];
+             ^
+usart.c(84): warning: unused parameter 'msg' [-Wunused-parameter]
+void printMsg(char *msg, ...) {
+                    ^
+6 warnings generated.
+compiling usart.c...
 timer.c(50): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
         GPIOB->MODER &= ~((1 << 8) | (1 << 10) | (1 << 12) | (1 << 14));
                      ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,26 +241,6 @@ timer.c(382): warning: implicit conversion changes signedness: 'int' to 'unsigne
                                  ~~ ^~~~~~~~~
 10 warnings generated.
 compiling timer.c...
-usart.c(22): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOA->MODER &= ~((1 << 18) | (1 << 20));
-                     ~~ ^~~~~~~~~~~~~~~~~~~~~~~~
-usart.c(35): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        USART1->CR1 &= ~(1 << 12);
-                    ~~ ^~~~~~~~~~
-usart.c(61): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        GPIOA->MODER &= ~((1 << 4) | (1 << 6));
-                     ~~ ^~~~~~~~~~~~~~~~~~~~~~
-usart.c(75): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        USART2->CR1 &= ~(1 << 12);
-                    ~~ ^~~~~~~~~~
-usart.c(86): warning: unused variable 'buff' [-Wunused-variable]
-        char buff[80];
-             ^
-usart.c(84): warning: unused parameter 'msg' [-Wunused-parameter]
-void printMsg(char *msg, ...) {
-                    ^
-6 warnings generated.
-compiling usart.c...
 complementary_filter.c(18): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
         float acc_total_vector = sqrt((acc_pitch * acc_pitch) + (acc_roll * acc_roll) + (acc_yaw * acc_yaw));
               ~~~~~~~~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -253,6 +252,7 @@ complementary_filter.c(25): warning: implicit conversion from 'int' to 'float' m
            ^~~~~~~~~~~~~ ~
 3 warnings generated.
 compiling complementary_filter.c...
+compiling system_stm32f4xx.c...
 assembling startup_stm32f411xe.s...
 linking...
 Program Size: Code=8100 RO-data=440 RW-data=12 ZI-data=1992  
@@ -283,12 +283,12 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
-      Source file:   MDK\Device\Source\ARM\STM32F411xx_OPT.s
-      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:03
+      Source file:   MDK\Device\Source\ARM\STM32F411xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

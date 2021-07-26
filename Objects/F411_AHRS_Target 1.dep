@@ -1,6 +1,6 @@
 Dependencies for Project 'F411_AHRS', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6160000::V6.16::ARMCLANG
-F (.\global.h)(0x60FD61AC)()
+F (.\global.h)(0x60FE1735)()
 F (.\ibus.c)(0x60AE20B3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-I"E:/Keil uVision/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"E:/Keil uVision/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/ibus.o -MD)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x5F6AD1D6)
 I (E:\Keil uVision\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm4.h)(0x5E8ED122)
@@ -33,13 +33,13 @@ I (E:\Keil uVision\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8ED122)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F6AD1D6)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6AD1D6)
 I (LED_Config.h)(0x60C0400A)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdbool.h)(0x6035A4A8)
 F (.\LED_Config.h)(0x60C0400A)()
 F (.\MahonyAHRS.c)(0x60CF0568)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-I"E:/Keil uVision/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"E:/Keil uVision/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/mahonyahrs.o -MD)
 I (MahonyAHRS.h)(0x60CF047F)
 I (E:\Keil uVision\ARM\ARMCLANG\include\math.h)(0x6035A4A8)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdint.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdbool.h)(0x6035A4A8)
 F (.\MahonyAHRS.h)(0x60CF047F)()
@@ -55,7 +55,7 @@ I (E:\Keil uVision\ARM\ARMCLANG\include\arm_acle.h)(0x6035A4A4)
 I (E:\Keil uVision\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8ED122)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F6AD1D6)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6AD1D6)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdbool.h)(0x6035A4A8)
 I (RCC_Config.h)(0x60ADEE5F)
 I (LED_Config.h)(0x60C0400A)
@@ -98,7 +98,7 @@ I (complementary_filter.h)(0x60CF4C74)
 I (pid.h)(0x60C37F93)
 I (mixer.h)(0x60C37E9A)
 I (task.h)(0x60C4B2C2)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 F (.\mixer.h)(0x60C37E9A)()
 F (.\mpu6000.c)(0x60CF4D48)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-I"E:/Keil uVision/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"E:/Keil uVision/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/mpu6000.o -MD)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x5F6AD1D6)
@@ -112,7 +112,7 @@ I (E:\Keil uVision\ARM\ARMCLANG\include\arm_acle.h)(0x6035A4A4)
 I (E:\Keil uVision\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8ED122)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F6AD1D6)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6AD1D6)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdbool.h)(0x6035A4A8)
 I (mpu6000.h)(0x60CF4C74)
 I (RCC_Config.h)(0x60ADEE5F)
@@ -143,7 +143,7 @@ I (E:\Keil uVision\ARM\ARMCLANG\include\string.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdlib.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdarg.h)(0x6035A4A8)
 I (SPI.h)(0x60B9B1EF)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (LED_Config.h)(0x60C0400A)
 I (ibus.h)(0x60AE20B3)
 I (mpu6000.h)(0x60CF4C74)
@@ -207,7 +207,7 @@ I (MahonyAHRS.h)(0x60CF047F)
 I (pid.h)(0x60C37F93)
 I (mixer.h)(0x60C37E9A)
 I (task.h)(0x60C4B2C2)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 F (.\task.h)(0x60C4B2C2)()
 F (.\timer.c)(0x60B84814)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-3 -O1 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I./RTE/_Target_1-I"E:/Keil uVision/ARM/CMSIS/5.7.0/CMSIS/Core/Include"-I"E:/Keil uVision/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include"-D__UVISION_VERSION="534" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/timer.o -MD)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6AD1D6)
@@ -237,7 +237,7 @@ I (E:\Keil uVision\ARM\ARMCLANG\include\arm_compat.h)(0x5EE13552)
 I (E:\Keil uVision\ARM\ARMCLANG\include\arm_acle.h)(0x6035A4A4)
 I (E:\Keil uVision\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8ED122)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F6AD1D6)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdbool.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\string.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdlib.h)(0x6035A4A8)
@@ -257,7 +257,7 @@ I (E:\Keil uVision\ARM\ARMCLANG\include\arm_acle.h)(0x6035A4A4)
 I (E:\Keil uVision\ARM\CMSIS\5.7.0\CMSIS\Core\Include\mpu_armv7.h)(0x5E8ED122)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5F6AD1D6)
 I (E:\Keil uVision\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5F6AD1D6)
-I (global.h)(0x60FD61AC)
+I (global.h)(0x60FE1735)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdbool.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\math.h)(0x6035A4A8)
 I (E:\Keil uVision\ARM\ARMCLANG\include\stdlib.h)(0x6035A4A8)
